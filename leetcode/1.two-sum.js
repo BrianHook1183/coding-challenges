@@ -20,6 +20,15 @@ You can return the answer in any order.
 */
 
 var twoSum = function (nums, target) {
+  // *brute force!!  38 mb / 74ms
+  for (let i = 0; i < nums.length; i++) {
+    const remainder = target - nums[i];
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[j] === remainder) {
+        return [i, j];
+      }
+    }
+  }
 };
 
 // @lc code=end
